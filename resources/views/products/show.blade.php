@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+    @php($settings = \App\Models\Setting::query()->first())
     <!-- Single Product Start -->
     <div class="container-fluid py-5 mt-5 " style="margin-top: 152px !important;">
         <div class="container py-5">
@@ -26,7 +26,9 @@
                                 Order Online? Chat on whatsapp
                             </a>--}}
 
-                            <a href="https://wa.me/17739913261?text=Hello%20there!%20I%20want%20to%20place%20an%20order"
+                            whatsapp_chat_number
+                            whatsapp_chat_first_message
+                            <a href="https://wa.me/{{ $settings->whatsapp_chat_number }}?text={{ $settings->whatsapp_chat_first_message }}"
                                class="mt-3 btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary" target="_blank">
                                 <i class="fa fa-shopping-bag me-2 text-primary"></i>
                                 Order Online? Chat on WhatsApp
