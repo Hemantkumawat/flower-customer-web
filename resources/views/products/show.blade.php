@@ -26,8 +26,6 @@
                                 Order Online? Chat on whatsapp
                             </a>--}}
 
-                            whatsapp_chat_number
-                            whatsapp_chat_first_message
                             <a href="https://wa.me/{{ $settings->whatsapp_chat_number }}?text={{ $settings->whatsapp_chat_first_message }}"
                                class="mt-3 btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary" target="_blank">
                                 <i class="fa fa-shopping-bag me-2 text-primary"></i>
